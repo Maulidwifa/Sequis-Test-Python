@@ -64,6 +64,6 @@ def test_list_a_friend_without_invalid_email():
     resp_friend = resp.json().get("friends")
     resp_time = resp.elapsed.microseconds
 
-    assert_that(status_code).is_equal_to(201)
+    assert_that(status_code).is_equal_to(200)
     assert_that(resp_friend).is_none()
     assert_that(resp_time).is_less_than(1000000)
